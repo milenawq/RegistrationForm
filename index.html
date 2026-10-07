@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fdddff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 350px;
+        padding: 25px;
+        background-color: rgb(180, 194, 244);
+        border-radius: 10px;
+        box-shadow: 0 2px 10px #ccc;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 9px;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #777;
+    }
+
+    .error {
+        color: #d93025;
+        font-size: 13px;
+        min-height: 18px;
+        margin-bottom: 8px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #b65252;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #333;
+    }
+</style>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <form id="registrationForm">
+        <label>Імʼя: </label>
+        <input type="text" id="name">
+        <div class="error" id="nameError"></div>
+
+        <label>Email: </label>
+        <input type="text" id="email">
+        <div class="error" id="emailError"></div>
+
+        <label>Пароль: </label>
+        <input type="password" id="password">
+        <div class="error" id="passwordError"></div>
+
+        <label>Підтвердження пароля: </label>
+        <input type="password" id="confirmPassword">
+        <div class="error" id="confirmPasswordError"></div>
+
+        <button type="submit">Зареєструватися</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
